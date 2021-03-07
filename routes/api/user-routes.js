@@ -12,10 +12,10 @@ router
     .get(getAllUsers)
     .post(postUser)
 
-// router
-//     .route('/:id')
-//     .get(getUserbyId)
-//     .put(updateUser)
-//     .delete(deleteUser)
+ router
+    .route('/:id')
+    .get(getUserbyId)
+    .put(updateUser)
+    .delete(deleteUser)
 
 module.exports = router;
