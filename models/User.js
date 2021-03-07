@@ -2,10 +2,6 @@ const {Schema, model, Types} = require('mongoose');
 
 const UserSchema = new Schema(
     {
-        userId: {
-            type: Schema.Types.ObjectId,
-            default: () => new Types.ObjectId()
-        },
         username: {
             type: String,
             required: 'Username is required.',
@@ -29,6 +25,12 @@ const UserSchema = new Schema(
                 ref:'User'
             }
         ]
+    },
+    {
+        toJSON: {
+            virtuals: true
+        },
+        id: false
     }
 );
 
